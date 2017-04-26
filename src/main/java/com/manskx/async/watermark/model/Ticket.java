@@ -1,5 +1,11 @@
 package com.manskx.async.watermark.model;
 
+/**
+ * This class represents ticket to be used to check task status
+ * 
+ * @author ahmedm
+ *
+ */
 public class Ticket {
 	private int document_id;
 	private int asunc_task_id;

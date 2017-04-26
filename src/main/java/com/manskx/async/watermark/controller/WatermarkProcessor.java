@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 import com.manskx.async.watermark.data.*;
 import com.manskx.async.watermark.model.*;
 
+/**
+ * 
+ * @author ahmedm This is main processor (watermark manager)
+ * 
+ */
 @Component
 public class WatermarkProcessor {
 	@Autowired
@@ -13,7 +18,12 @@ public class WatermarkProcessor {
 	@Autowired
 	AscyncTasksProcessor ascyncTasksProcessor;
 
-	// returns task id
+	/**
+	 * 
+	 * @param document:
+	 *            to be watermarked
+	 * @return Ticket: contains job id and document id;
+	 */
 	public Ticket startWaterMarking(Document document) {
 
 		documentRepository.insertDocument(document);
@@ -23,11 +33,15 @@ public class WatermarkProcessor {
 	}
 
 	public State checkTaskStatus(int taskId) throws Exception {
-
 		return ascyncTasksProcessor.getTaskState(taskId);
-
 	}
 
+	/**
+	 * 
+	 * @param documentId
+	 * @return return document object of documentId.
+	 * NOTE: if the document id not watermarked it will not contain watermark object
+	 */
 	public Document getdocument(int documentId) {
 		return documentRepository.getDocumentByID(documentId);
 	}

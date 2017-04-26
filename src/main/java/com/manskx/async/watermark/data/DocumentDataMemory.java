@@ -8,6 +8,12 @@ import org.springframework.stereotype.Repository;
 import com.manskx.async.watermark.model.*;
 import com.manskx.async.watermark.utils.Numbers;
 
+/**
+ * This is very simple storing method. Key-Value HashMap
+ * 
+ * @author ahmedm
+ *
+ */
 @Repository
 public class DocumentDataMemory implements DocumentData {
 

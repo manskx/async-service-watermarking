@@ -12,6 +12,15 @@ public class Book extends Document {
 		super();
 	}
 
+	/**
+	 * Jackson constructor.
+	 * 
+	 * @param title
+	 * @param author
+	 * @param topic
+	 * @param fileId
+	 * @param content
+	 */
 	public Book(@JsonProperty("title") String title, @JsonProperty("author") String author,
 			@JsonProperty("topic") String topic, @JsonProperty("file_id") int fileId,
 			@JsonProperty("content") Content content) {
@@ -20,6 +29,11 @@ public class Book extends Document {
 
 	}
 
+	/**
+	 * This is key value constractor to be used for general document types.
+	 * 
+	 * @param properties
+	 */
 	public Book(Map<String, Object> properties) {
 		super((String) properties.get("title"), (String) properties.get("author"),
 				Content.valueOf((String) properties.get("content")), (Integer) properties.get("file_id"));
@@ -35,6 +49,11 @@ public class Book extends Document {
 		this.topic = topic;
 	}
 
+	/**
+	 * Watermarking process
+	 * 
+	 * NOTE: watermarking for document is not the same for journels
+	 */
 	@Override
 	public void markWatermarked() {
 		this.setWatermark(new BookWatermark(this));

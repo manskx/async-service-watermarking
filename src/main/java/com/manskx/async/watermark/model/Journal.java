@@ -15,12 +15,22 @@ public class Journal extends Document {
 
 	}
 
+	/**
+	 * This is key value constractor to be used for general document types.
+	 * 
+	 * @param properties
+	 */
 	public Journal(Map<String, Object> properties) {
 		super((String) properties.get("title"), (String) properties.get("author"),
 				Content.valueOf((String) properties.get("content")), (Integer) properties.get("file_id"));
 
 	}
 
+	/**
+	 * Watermarking process
+	 * 
+	 * NOTE: watermarking for document is not the same for journals
+	 */
 	@Override
 	public void markWatermarked() {
 		this.setWatermark(new JournalWatermark(this));

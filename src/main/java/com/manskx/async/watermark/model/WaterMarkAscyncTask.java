@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.manskx.async.watermark.config.Configuration;
 
-public class WaterMarkAscyncTask implements AscyncTask {
+public class WaterMarkAscyncTask implements AsyncTask {
 
 	private int id;
 	private boolean finished;

@@ -1,5 +1,11 @@
 package com.manskx.async.watermark.model;
 
+/**
+ * Base watermark object to be extended for future other watermark types
+ * 
+ * @author ahmedm
+ *
+ */
 public class Watermark {
 	private Content content;
 	private String title;

@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.manskx.async.watermark.Application;
 import com.manskx.async.watermark.config.Configuration;
-import com.manskx.async.watermark.model.AscyncTask;
+import com.manskx.async.watermark.model.AsyncTask;
 import com.manskx.async.watermark.model.Book;
 import com.manskx.async.watermark.model.Content;
 import com.manskx.async.watermark.model.Document;
