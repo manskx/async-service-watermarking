@@ -35,4 +35,8 @@ public class Book extends Document {
 		this.topic = topic;
 	}
 
+	@Override
+	public void markWatermarked() {
+		this.setWatermark(new BookWatermark(this));
+	}
 }

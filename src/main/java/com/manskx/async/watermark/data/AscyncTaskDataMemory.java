@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.stereotype.Repository;
 
+import com.manskx.async.watermark.model.AscyncTask;
 import com.manskx.async.watermark.utils.Numbers;
 
 @Repository

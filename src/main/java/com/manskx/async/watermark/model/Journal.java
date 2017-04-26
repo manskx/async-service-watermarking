@@ -21,4 +21,9 @@ public class Journal extends Document {
 
 	}
 
+	@Override
+	public void markWatermarked() {
+		this.setWatermark(new JournalWatermark(this));
+	}
+
 }

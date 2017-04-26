@@ -70,4 +70,7 @@ public class Document {
 		this.watermark = watermark;
 	}
 
+	public void markWatermarked() {
+	}
+
 }

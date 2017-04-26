@@ -1,4 +1,4 @@
-package com.manskx.async.watermark.data;
+package com.manskx.async.watermark.model;
 
 public enum State {
 	NOT_STARTED, PENDING, FINISHED

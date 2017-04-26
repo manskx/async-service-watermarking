@@ -9,6 +9,12 @@ public class Watermark {
 
 	}
 
+	public Watermark(Document document) {
+		this.content = document.getContent();
+		this.title = document.getTitle();
+		this.author = document.getAuthor();
+	}
+
 	public Content getContent() {
 		return content;
 	}
