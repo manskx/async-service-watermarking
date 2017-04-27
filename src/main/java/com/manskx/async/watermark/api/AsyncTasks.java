@@ -8,6 +8,7 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 
 import com.manskx.async.watermark.controller.WatermarkProcessor;
 import com.manskx.async.watermark.model.State;
@@ -16,7 +17,8 @@ import com.manskx.async.watermark.model.State;
  * 
  * @author ahmedm This endpoint for async tasks
  */
-@Path("asynctasks")
+@Path("/asynctasks")
+@Component
 public class AsyncTasks {
 	@Autowired
 	private WatermarkProcessor watermarkProcessor;
@@ -27,7 +29,7 @@ public class AsyncTasks {
 	 * @return Task status
 	 * @throws Exception
 	 */
-	@Path("status")
+	@Path("/status")
 	@GET
 	public Response checkWatermarkStatus(@QueryParam("task_id") int taskId) {
 		State status = null;

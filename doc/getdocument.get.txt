@@ -1,0 +1,29 @@
+URL: watermark/documents?document_id=60
+Method: GET
+Accept: application/json
+
+REQUEST:
+
+Query Parameters:
+document_id: [Integer]
+
+Response: (Document)
+	Status: 200
+	Body: JSON
+	
+EX:
+Request (GET): http://localhost:8080/watermark/documents?document_id=60
+RESPONSE: 
+
+{
+  "title": "mansy",
+  "author": "Ahmed",
+  "file_id": 23,
+  "content": "JOURNAL",
+  "id": 60,
+  "watermark": {
+    "content": "JOURNAL",
+    "title": "mansy",
+    "author": "Ahmed"
+  }
+}

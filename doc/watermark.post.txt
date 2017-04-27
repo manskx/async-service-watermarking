@@ -1,0 +1,34 @@
+URL: /watermark/watermarks/document
+Method: POST
+Content-Type: application/json
+Accept: application/json
+
+Rquest Body: Json object of Document (Book, Journal)
+{
+ 	"title": [String],
+	"file_id": [Integer],
+	"content": [ENUM/String] [JOURNAL||BOOK],
+	"author": [String],
+	"topic": (optional)[String]
+}
+
+Response: (Ticket)
+Status: 202
+Body: JSON
+
+
+EX:
+Request:
+	{
+		"title":"mansy",
+		"file_id":23,
+		"content":"BOOK",
+		"author":"Ahmed",
+		"topic": "topic"
+	}
+
+Response:
+	{
+	  "document_id": 93,
+	  "asunc_task_id": 817
+	}

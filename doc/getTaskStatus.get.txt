@@ -1,0 +1,18 @@
+URL: watermark/asynctasks/status?task_id=247
+Method: GET
+Accept: text/plain
+
+REQUEST:
+
+Query Parameters:
+task_id: [Integer]
+
+Response: (Document)
+	Status: 500(ERROR) - 202 (PENDING)- 200 (FINISHED) - 409 (NOT_STARTED) 
+	Body: JSON
+	
+EX:
+Request (GET): http://localhost:8080/watermark/asynctasks/status?task_id=247
+RESPONSE: 200
+
+  "FINISHED"
