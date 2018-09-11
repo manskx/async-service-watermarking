@@ -1,7 +1,7 @@
 # async-service-watermarking
 asynchronous restful service for watermarking documents
 Readme:
-This application is built using (for first time) [resteasy-spring-boot-paypal](https://github.com/paypal/resteasy-spring-boot). It is an example of asynchronous restful service for watermarking documents.
+This application is built using [resteasy-spring-boot-paypal](https://github.com/paypal/resteasy-spring-boot). It is an example of asynchronous restful service for watermarking documents.
 
 
 Assumptions:
